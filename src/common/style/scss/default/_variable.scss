@@ -1,0 +1,33 @@
+@charset "utf-8";
+/******* variable *******/
+
+$color-default: #000;
+$font-size-default: 10px;
+$font-size-title: 20px;
+$background-color-default: #fff;
+
+//$font-default: 'Roboto', 'Microsoft YaHei', 'Microsoft JhengHei';
+$font-default: 'Roboto Condensed', 'Microsoft YaHei', 'Microsoft JhengHei';
+
+$color-main: #28a9e0;
+$color-sub: #f8f8f8;
+
+$color-text: #393939;
+
+//grid
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+);
+
+

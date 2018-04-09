@@ -1,0 +1,41 @@
+html {
+  //background-color: $background-color-default;
+  font-family: $font-default;
+  font-size: $font-size-default;
+}
+
+.content{
+  overflow-x: hidden;
+  display: block;
+}
+
+ul{
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+p{
+  font-size: 12px;
+}
+
+.img-full{
+  width: 100%;
+}
+
+
+
+//sample
+
+//@media screen and (min-width: map-get($grid-breakpoints, 'sm')){
+//
+//}
+//@media screen and (min-width: map-get($grid-breakpoints, 'md')){
+//
+//}
+//@media screen and (min-width: map-get($grid-breakpoints, 'lg')){
+//
+//}
+//@media screen and (min-width: map-get($grid-breakpoints, 'xl')){
+//
+//}

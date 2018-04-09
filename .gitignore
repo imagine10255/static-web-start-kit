@@ -1,0 +1,17 @@
+#Mac Osx
+.DS_Store
+
+#Webstorm
+.idea
+
+#Prepros
+prepros-6.config
+
+#docker-compose
+docker-compose.yml
+
+#Markdown plugin
+READE.html
+
+#node package
+node_modules
