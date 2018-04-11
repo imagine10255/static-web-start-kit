@@ -4,7 +4,7 @@
 <img src="./thumb.jpg">
 
 
-- 馬來封測站(Html)
+- 封測站(Html)
   
   * {YOUR_DEMO_PATH}
 
