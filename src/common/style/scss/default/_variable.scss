@@ -2,8 +2,8 @@
 /******* variable *******/
 
 $color-default: #000;
-$font-size-default: 10px;
-$font-size-title: 20px;
+$font-size-default: 62.5rem; //等同 10px 參考 https://segmentfault.com/a/1190000009878145
+$font-size-title: 2rem;
 $background-color-default: #fff;
 
 //$font-default: 'Roboto', 'Microsoft YaHei', 'Microsoft JhengHei';
@@ -16,11 +16,11 @@ $color-text: #393939;
 
 //grid
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px
+        xs: 0,     // (0~575)    map bs3 size: 320,480
+        sm: 576px, // (576~767)  map bs3 size: 無
+        md: 768px, // (768~991)  map bs3 size: 750
+        lg: 992px, // (992~1200) map bs3 size: 970
+        xl: 1200px // (1200以上)  map bs3 size: 1170
 );
 
 $container-max-widths: (
