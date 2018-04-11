@@ -15,3 +15,6 @@ READE.html
 
 #node package
 node_modules
+
+#log
+*.log
