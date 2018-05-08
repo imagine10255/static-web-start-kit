@@ -2,7 +2,7 @@
 /******* variable *******/
 
 $color-default: #000;
-$font-size-default: 6.25rem; //等同 10px 參考 https://segmentfault.com/a/1190000009878145
+$font-size-default: 62.5%; //等同 10px 參考 https://segmentfault.com/a/1190000009878145
 $font-size-title: 2rem;
 $background-color-default: #fff;
 
@@ -27,7 +27,8 @@ $container-max-widths: (
         sm: 540px,
         md: 720px,
         lg: 960px,
-        xl: 1140px
+        xl: 1200px
 );
 
+//$grid-gutter-width: 10px; //設定間距
 
