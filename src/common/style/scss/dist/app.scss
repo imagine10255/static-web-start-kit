@@ -1,17 +1,26 @@
-/**** Designe by Selin 2017 October ****/
-@import "../default/mixin";
-@import "../default/variable";
+// Bootstrap4
+@import "../plugins/bootstrap/require";
 
-/* Default */
-@import "../default/common";
+
+// Custom
+@import "../default/variable";
+@import "../default/mixin";
+@import "../default/_reboot";
+
+
+/* ==========================================
+                 Option Setting
+ ========================================== */
+
+// Bootstrap4
+@import "../plugins/bootstrap/option";
+
+// Custom
+@import "../default/_image";
 @import "../default/_form";
 @import "../default/_button";
-@import "../default/image";
 
-/* Plugins */
-
-
-/* Layout */ 
+/* Layout */
 @import "../layout/header";
 @import "../layout/footer";
 @import "../layout/navigation";
