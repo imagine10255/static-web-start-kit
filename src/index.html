@@ -27,43 +27,78 @@
 <body class="page-index">
 <!--Write something-->
 
+<div id="app">
 
-<section class="world-cup-schedule" id="world-cup-schedule">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <schedule-match/>
+    <section class="world-cup-schedule">
+        <div class="container">
+            <div v-for="row in scheduleTopData">
+                <div class="row">
+                    <div class="col" v-for="team in row">
+                        <schedule-match :date="team.date" :time="team.time" :name1="team.name1" :name2="team.name2"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" v-for="(team,index) in row" v-if="index % 2===1">
+                        <line-top-children/>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <schedule-match/>
-            </div>
-            <div class="col">
-                <schedule-match/>
-            </div>
-            <div class="col">
-                <schedule-match/>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-6">
-                <line-children/>
-            </div>
-            <div class="col-6">
-                <line-children/>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-6 text-center">
-                <schedule-match/>
+            <div v-for="row in scheduleBottomData">
+                <div class="row">
+                    <div class="col" v-for="(team,index) in row" v-if="index % 2===1">
+                        <line-bottom-children/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" v-for="team in row">
+                        <schedule-match :date="team.date" :time="team.time" :name1="team.name1" :name2="team.name2"/>
+                    </div>
+                </div>
             </div>
-            <div class="col-6">
-                <schedule-match/>
-            </div>
+
         </div>
-    </div>
-</section>
+    </section>
+
+
+    <!--<section class="world-cup-schedule">-->
+    <!--<div class="container">-->
+    <!--<div class="row" v-for="row in schedule">-->
+    <!--<div class="col">-->
+    <!--<schedule-match/>-->
+    <!--</div>-->
+    <!--<div class="col">-->
+    <!--<schedule-match/>-->
+    <!--</div>-->
+    <!--<div class="col">-->
+    <!--<schedule-match/>-->
+    <!--</div>-->
+    <!--<div class="col">-->
+    <!--<schedule-match/>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+    <!--<div class="col-6">-->
+    <!--<line-children/>-->
+    <!--</div>-->
+    <!--<div class="col-6">-->
+    <!--<line-children/>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+    <!--<div class="col-6 text-center">-->
+    <!--<schedule-match/>-->
+    <!--</div>-->
+    <!--<div class="col-6">-->
+    <!--<schedule-match/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+</div>
 
 
 </body>
@@ -73,4 +108,109 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <!--page-->
+<script>
+    // 上半部
+    var scheduleTop = [
+        [
+            {
+                'date': '28 Jun',
+                'time': '09:00',
+                'name1': 'Saudi Arabia',
+                'name2': 'Saudi Arabia',
+            },
+            {
+                'date': '29 Jun',
+                'time': '10:30',
+                'name1': 'Saudi Baba',
+                'name2': 'Saudi Baba',
+            },
+            {
+                'date': '30 Jun',
+                'time': '11:00',
+                'name1': 'Saudi Caca',
+                'name2': 'Saudi Caca',
+            },
+            {
+                'date': '31 Jun',
+                'time': '12:30',
+                'name1': 'Saudi Daba',
+                'name2': 'Saudi Daba',
+            },
+        ],
+        [
+            {
+                'date': '28 Jun',
+                'time': '09:00',
+                'name1': 'Saudi Arabia',
+                'name2': 'Saudi Arabia',
+            },
+            {
+                'date': '29 Jun',
+                'time': '10:30',
+                'name1': 'Saudi Baba',
+                'name2': 'Saudi Baba',
+            },
+        ],
+        [
+            {
+                'date': '28 Jun',
+                'time': '09:00',
+                'name1': 'Saudi Arabia',
+                'name2': 'Saudi Arabia',
+            }
+        ]
+    ];
+
+    // 下半部
+    var scheduleBottom = [
+        [
+            {
+                'date': '28 Jun',
+                'time': '09:00',
+                'name1': 'Saudi Arabia',
+                'name2': 'Saudi Arabia',
+            },
+            {
+                'date': '29 Jun',
+                'time': '10:30',
+                'name1': 'Saudi Baba',
+                'name2': 'Saudi Baba',
+            },
+            {
+                'date': '30 Jun',
+                'time': '11:00',
+                'name1': 'Saudi Caca',
+                'name2': 'Saudi Caca',
+            },
+            {
+                'date': '31 Jun',
+                'time': '12:30',
+                'name1': 'Saudi Daba',
+                'name2': 'Saudi Daba',
+            },
+        ],
+        [
+            {
+                'date': '28 Jun',
+                'time': '09:00',
+                'name1': 'Saudi Arabia',
+                'name2': 'Saudi Arabia',
+            },
+            {
+                'date': '29 Jun',
+                'time': '10:30',
+                'name1': 'Saudi Baba',
+                'name2': 'Saudi Baba',
+            },
+        ],
+        [
+            {
+                'date': '28 Jun',
+                'time': '09:00',
+                'name1': 'Saudi Arabia',
+                'name2': 'Saudi Arabia',
+            }
+        ]
+    ]
+</script>
 <script src="common/js/page/index.js"></script>
