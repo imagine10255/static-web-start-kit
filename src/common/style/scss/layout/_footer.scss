@@ -1,17 +1,12 @@
 footer {
 
-  @media screen and (min-width: map-get($grid-breakpoints, 'sm')){
+  //Write something
 
-
-  }
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')){
-
-  }
-  @media screen and (min-width: map-get($grid-breakpoints, 'lg')){
-
-  }
-  @media screen and (min-width: map-get($grid-breakpoints, 'xl')){
-  }
+  //sample
+  @media screen and (min-width: map-get($grid-breakpoints, 'sm')){}
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')){}
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')){}
+  @media screen and (min-width: map-get($grid-breakpoints, 'xl')){}
 
 }
 
