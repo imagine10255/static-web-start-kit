@@ -31,6 +31,7 @@
 
     <section class="world-cup-schedule">
         <div class="container">
+            <!--上半賽程-->
             <div v-for="row in scheduleTopData">
                 <div class="row">
                     <div class="col" v-for="team in row">
@@ -44,7 +45,26 @@
                 </div>
             </div>
 
+            <!--總決賽-->
+            <div class="row">
+                <div class="col">
+                    <line-center-children/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <schedule-match :date="scheduleCenter.date" :time="scheduleCenter.time" :name1="scheduleCenter.name1" :name2="scheduleCenter.name2" class="scheduleCenter"/>
+                    <!--<schedule-match :date="scheduleCenterSelf.date" :time="scheduleCenterSelf.time" :name1="scheduleCenterSelf.name1" :name2="scheduleCenterSelf.name2" class="scheduleCenterSelf"/>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <line-center-children/>
+                </div>
+            </div>
+            <!--總決賽 End-->
 
+            <!--下半賽程-->
             <div v-for="row in scheduleBottomData">
                 <div class="row">
                     <div class="col" v-for="(team,index) in row" v-if="index % 2===1">
@@ -111,106 +131,153 @@
 <script>
     // 上半部
     var scheduleTop = [
-        [
-            {
+        {
+            'row':{
                 'date': '28 Jun',
                 'time': '09:00',
                 'name1': 'Saudi Arabia',
                 'name2': 'Saudi Arabia',
             },
-            {
-                'date': '29 Jun',
-                'time': '10:30',
-                'name1': 'Saudi Baba',
-                'name2': 'Saudi Baba',
-            },
-            {
-                'date': '30 Jun',
-                'time': '11:00',
-                'name1': 'Saudi Caca',
-                'name2': 'Saudi Caca',
-            },
-            {
-                'date': '31 Jun',
-                'time': '12:30',
-                'name1': 'Saudi Daba',
-                'name2': 'Saudi Daba',
-            },
-        ],
-        [
-            {
-                'date': '28 Jun',
-                'time': '09:00',
-                'name1': 'Saudi Arabia',
-                'name2': 'Saudi Arabia',
-            },
-            {
-                'date': '29 Jun',
-                'time': '10:30',
-                'name1': 'Saudi Baba',
-                'name2': 'Saudi Baba',
-            },
-        ],
-        [
-            {
-                'date': '28 Jun',
-                'time': '09:00',
-                'name1': 'Saudi Arabia',
-                'name2': 'Saudi Arabia',
-            }
-        ]
+            'child': [
+                {
+                    'row':{
+                        'date': '28 Jun',
+                        'time': '09:00',
+                        'name1': 'Saudi Arabia',
+                        'name2': 'Saudi Arabia',
+                    },
+                    'child': [
+                        {
+                            'row':{
+                                'date': '28 Jun',
+                                'time': '09:00',
+                                'name1': 'Saudi Arabia',
+                                'name2': 'Saudi Arabia',
+                            }
+                        },
+                        {
+                            'row':{
+                                'date': '28 Jun',
+                                'time': '09:00',
+                                'name1': 'Saudi Arabia',
+                                'name2': 'Saudi Arabia',
+                            }
+                        },
+
+                    ]
+                },
+                {
+                    'row':{
+                        'date': '28 Jun',
+                        'time': '09:00',
+                        'name1': 'Saudi Arabia',
+                        'name2': 'Saudi Arabia',
+                    },
+                    'child': [
+                        {
+                            'row':{
+                                'date': '28 Jun',
+                                'time': '09:00',
+                                'name1': 'Saudi Arabia',
+                                'name2': 'Saudi Arabia',
+                            }
+                        },
+                        {
+                            'row':{
+                                'date': '28 Jun',
+                                'time': '09:00',
+                                'name1': 'Saudi Arabia',
+                                'name2': 'Saudi Arabia',
+                            }
+                        },
+
+                    ]
+                }
+            ]
+        }
     ];
 
     // 下半部
     var scheduleBottom = [
-        [
-            {
+        {
+            'row':{
                 'date': '28 Jun',
                 'time': '09:00',
                 'name1': 'Saudi Arabia',
                 'name2': 'Saudi Arabia',
             },
-            {
-                'date': '29 Jun',
-                'time': '10:30',
-                'name1': 'Saudi Baba',
-                'name2': 'Saudi Baba',
-            },
-            {
-                'date': '30 Jun',
-                'time': '11:00',
-                'name1': 'Saudi Caca',
-                'name2': 'Saudi Caca',
-            },
-            {
-                'date': '31 Jun',
-                'time': '12:30',
-                'name1': 'Saudi Daba',
-                'name2': 'Saudi Daba',
-            },
-        ],
-        [
-            {
-                'date': '28 Jun',
-                'time': '09:00',
-                'name1': 'Saudi Arabia',
-                'name2': 'Saudi Arabia',
-            },
-            {
-                'date': '29 Jun',
-                'time': '10:30',
-                'name1': 'Saudi Baba',
-                'name2': 'Saudi Baba',
-            },
-        ],
-        [
-            {
-                'date': '28 Jun',
-                'time': '09:00',
-                'name1': 'Saudi Arabia',
-                'name2': 'Saudi Arabia',
-            }
-        ]
-    ]
+            'child': [
+                {
+                    'row':{
+                        'date': '28 Jun',
+                        'time': '09:00',
+                        'name1': 'Saudi Arabia',
+                        'name2': 'Saudi Arabia',
+                    },
+                    'child': [
+                        {
+                            'row':{
+                                'date': '28 Jun',
+                                'time': '09:00',
+                                'name1': 'Saudi Arabia',
+                                'name2': 'Saudi Arabia',
+                            }
+                        },
+                        {
+                            'row':{
+                                'date': '28 Jun',
+                                'time': '09:00',
+                                'name1': 'Saudi Arabia',
+                                'name2': 'Saudi Arabia',
+                            }
+                        },
+
+                    ]
+                },
+                {
+                    'row':{
+                        'date': '28 Jun',
+                        'time': '09:00',
+                        'name1': 'Saudi Arabia',
+                        'name2': 'Saudi Arabia',
+                    },
+                    'child': [
+                        {
+                            'row':{
+                                'date': '28 Jun',
+                                'time': '09:00',
+                                'name1': 'Saudi Arabia',
+                                'name2': 'Saudi Arabia',
+                            }
+                        },
+                        {
+                            'row':{
+                                'date': '28 Jun',
+                                'time': '09:00',
+                                'name1': 'Saudi Arabia',
+                                'name2': 'Saudi Arabia',
+                            }
+                        },
+
+                    ]
+                }
+            ]
+        }
+    ];
+
+    // 總決賽
+    var scheduleCenter = {
+        'date': '28 Jun',
+        'time': '09:00',
+        'name1': 'Saudi Arabia',
+        'name2': 'Saudi Arabia',
+    }
+    // 3,4名比賽
+    var scheduleCenterSelf = {
+        'date': '28 Jun',
+        'time': '09:00',
+        'name1': 'Saudi Arabia',
+        'name2': 'Saudi Arabia',
+    }
 </script>
 <script src="common/js/page/index.js"></script>
