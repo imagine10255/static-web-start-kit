@@ -47,8 +47,8 @@ gulp.task('pug', () => {
 
 gulp.task('sass', () => {
     return gulp.src([
-        src_assets_folder + 'sass/app/app.scss'
-    ], { since: gulp.lastRun('sass') })
+        src_assets_folder + 'scss/app/**/*.scss'
+    ])
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(dependents())
@@ -130,11 +130,11 @@ gulp.task('watch', () => {
 
     const watch = [
         src_folder + '**/*.html',
-        src_folder + '*.html',
         // src_folder + 'pug/**/*.pug',
         src_assets_folder + 'scss/**/*.scss',
         src_assets_folder + 'js/**/*.js'
     ];
+    console.log(watch);
 
     gulp.watch(watch, gulp.series('dev')).on('change', browserSync.reload);
     gulp.watch(watchImages, gulp.series('images')).on('change', browserSync.reload);
