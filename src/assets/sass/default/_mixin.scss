@@ -1,0 +1,11 @@
+/**
+ * 背景圖設定
+ * $img: 圖片路徑從 img 開始
+ * $color: 預設背景色
+ * $position: 對齊方式
+ * $repeate: 是否重複
+ * $attachement: 背景是否固定或隨著背景移動
+ */
+@mixin background($img,$position:center,$color:transparent,$repeat:no-repeat) {
+  background: $color url("../../../img/#{$img}") $repeat $position ;
+}

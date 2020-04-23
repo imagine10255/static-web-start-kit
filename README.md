@@ -1,75 +1,26 @@
-# Static Web Starter Kit (Html)
+# Static Web Start Kit
 
+<div align="center"><strong>Start your next web project in seconds</strong></div>
+<div align="center">A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</div>
 
-<img src="./thumb.jpg">
-
-
-- 封測站(Html)
-  
-  * {YOUR_DEMO_PATH}
-
-
-## 發佈程式（封測站）
-
-```
-將src
-上傳(覆蓋)到 {YOUR_FTP_PATH}
-
-```
 
 ## Features
 
-* [JQuery 3] (https://jquery.com/download/) JavaScript Library
-* [Bootstrap 4.0.0](http://bootstrap.hexschool.com/docs/4.0/components/popovers/) CSS Framework
+<dl>
+  <dt>Quick scaffolding</dt>
+  <dd>Create web, containers,  right from the CLI!</dd>
+
+  <dt>Next generation CSS</dt>
+  <dd>Write composable CSS that's co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance.</dd>
+</dl>
 
 
-## 開發環境
+## Quick start
 
-該專案開發工具使用 gulp 進行編譯scss 與 browsersync, 進而加速開發
+1.  Make sure that you have Node.js 13.5 or above installed.
+2.  Clone this repo using `git clone https://github.com/imagine10255/static-web-start-kit.git my-project`
+3.  Move to the appropriate directory: `cd my-project`.<br />
+4.  Run `yarn install` in order to install dependencies and clean the git repo.<br />
+5.  _At this point you can run `yarn dev` to see the example app at `http://localhost:3000`.  
 
-- 安裝
-- 
-```bash
-$ yarn
-```
-
-- 啟動
-
-```bash
-$ yarn dev
-```
-
-- 壓縮圖片
-
-```bash
-$ yarn img
-```
-
-
-
-
-## App Structure
-
-中文版或英文版若有該語言區分的資源, 則跟common建立相同的資料結構
-
-
-```
-.
-├── etc
-│   └── nginx
-│       └── default.conf                        # docker compose 需要的 Nginx 設定檔
-├── src                                         # App source code
-│   ├── common                                  # 不分語系 共用資源資料夾
-│   │   ├── img                                 # 圖片
-│   │   ├── js                                  # 單一的Javascript (非Plugin)
-│   │   │   ├── helper                          # 自定義常用到的工具JS
-│   │   │   └── page                            # 給各頁面的獨立JS
-│   │   ├── plugin                              # 套件模組 (例如JQuery,Bootstrap,BlockUI)
-│   │   └── style                               # build client app
-│   │       ├── css/dist                             # SCSS編譯完成的路徑
-│   │       ├── font                            # 字型檔
-│   │       └── scss                            # SCSS資料夾
-│   ├── index.html                              # 首頁
-├── .gitlab-ci.yml                              # GITLAB-CI 持續整合測試設定檔
-└── docker-compose.yml.sample                   # Docker Compose 部屬設定檔案
-```
+Now you're ready to rumble!
