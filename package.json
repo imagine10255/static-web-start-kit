@@ -27,7 +27,7 @@
   "author": "imagine10255@gmail.com",
   "license": "MIT",
   "devDependencies": {
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.3.1",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "browser-sync": "^2.26.7",
